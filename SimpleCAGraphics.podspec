@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SimpleCAGraphics'
-  s.version = '1.0.0'
+  s.version = 'v1.0.0'
   s.license = 'MIT'
   s.summary = 'Easy access to Core Animation graphics.'
   s.homepage = 'https://github.com/KinkumaDesign/SimpleCAGraphics'
