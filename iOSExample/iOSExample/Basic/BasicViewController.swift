@@ -17,6 +17,11 @@ class BasicViewController: UIViewController {
         normalCall()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = ViewController.Menu.basic.title
+    }
+    
     func methodChaining() {
         let layerController = LayerController()
         layerController.setFrame(x: 0, y: 0, width: 100, height: 80)

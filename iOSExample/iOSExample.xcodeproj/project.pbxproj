@@ -17,6 +17,8 @@
 		D5AD6CAF22360246006D640D /* SimpleCAGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AD6CA7223601E9006D640D /* SimpleCAGraphics.framework */; };
 		D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B1DA8F22389F2A00BDFA74 /* BasicViewController.storyboard */; };
 		D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1DA9122389F3500BDFA74 /* BasicViewController.swift */; };
+		D5B1DA942238A77D00BDFA74 /* LayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1DA932238A77D00BDFA74 /* LayerControllerExample.swift */; };
+		D5B1DA962238A78500BDFA74 /* LayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B1DA952238A78500BDFA74 /* LayerControllerExample.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		D5AD6CA1223601E9006D640D /* SimpleCAGraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleCAGraphics.xcodeproj; path = ../SimpleCAGraphics.xcodeproj; sourceTree = "<group>"; };
 		D5B1DA8F22389F2A00BDFA74 /* BasicViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicViewController.storyboard; sourceTree = "<group>"; };
 		D5B1DA9122389F3500BDFA74 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
+		D5B1DA932238A77D00BDFA74 /* LayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerControllerExample.swift; sourceTree = "<group>"; };
+		D5B1DA952238A78500BDFA74 /* LayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LayerControllerExample.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,8 @@
 		D5B1DA8922389F0B00BDFA74 /* LayerController */ = {
 			isa = PBXGroup;
 			children = (
+				D5B1DA952238A78500BDFA74 /* LayerControllerExample.storyboard */,
+				D5B1DA932238A77D00BDFA74 /* LayerControllerExample.swift */,
 			);
 			path = LayerController;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5B1DA962238A78500BDFA74 /* LayerControllerExample.storyboard in Resources */,
 				D5AD6C882235FC8F006D640D /* LaunchScreen.storyboard in Resources */,
 				D5AD6C852235FC8F006D640D /* Assets.xcassets in Resources */,
 				D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */,
@@ -334,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD6C802235FC8E006D640D /* ViewController.swift in Sources */,
+				D5B1DA942238A77D00BDFA74 /* LayerControllerExample.swift in Sources */,
 				D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */,
 				D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */,
 			);

@@ -88,6 +88,8 @@ extension ViewController: UITableViewDelegate {
         switch indexPath.row {
         case Menu.basic.rawValue:
             nextViewController = createViewController(name: "BasicViewController")
+        case Menu.layerController.rawValue:
+            nextViewController = createViewController(name: "LayerControllerExample")
         default:
             break
         }
