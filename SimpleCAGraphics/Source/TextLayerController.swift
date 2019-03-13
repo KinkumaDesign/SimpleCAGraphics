@@ -42,8 +42,48 @@ public class TextLayerController: LayerController<CATextLayer> {
         }
     }
     
+    public var fontSize: Float? {
+        get {
+            guard let layerFont = layer.font,
+                let size = layerFont.pointSize else { return nil }
+            return Float(size)
+        }
+        set {
+            guard let value = newValue else { return }
+            layer.fontSize = CGFloat(value)
+        }
+    }
+    
+    public var isWrapped: Bool {
+        get {
+            return layer.isWrapped
+        }
+        set {
+            layer.isWrapped = newValue
+        }
+    }
+    
+    public var alignmentMode: CATextLayerAlignmentMode {
+        get {
+            return layer.alignmentMode
+        }
+        set {
+            layer.alignmentMode = newValue
+        }
+    }
+    
+    public var truncationMode: CATextLayerTruncationMode {
+        get {
+            return layer.truncationMode
+        }
+        set {
+            layer.truncationMode = newValue
+        }
+    }
+    
     override public init(_ layer: CATextLayer = CATextLayer()) {
         super.init(layer)
+        layer.fontSize = 14
     }
     
     @discardableResult
@@ -61,6 +101,30 @@ public class TextLayerController: LayerController<CATextLayer> {
     @discardableResult
     public func setFont(_ font: UIFont?) -> Self {
         self.font = font
+        return self
+    }
+    
+    @discardableResult
+    public func setFontSize(_ size: Float) -> Self {
+        self.fontSize = size
+        return self
+    }
+    
+    @discardableResult
+    public func setIsWrapped(_ wrapped: Bool) -> Self {
+        self.isWrapped = wrapped
+        return self
+    }
+    
+    @discardableResult
+    public func setAlignmentMode(_ mode: CATextLayerAlignmentMode) -> Self {
+        self.alignmentMode = mode
+        return self
+    }
+    
+    @discardableResult
+    public func setTruncationMode(_ mode: CATextLayerTruncationMode) -> Self {
+        self.truncationMode = mode
         return self
     }
 }
