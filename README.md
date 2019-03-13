@@ -53,6 +53,32 @@ Podfile
 pod 'SimpleCAGraphics', :git => 'https://github.com/KinkumaDesign/SimpleCAGraphics.git'
 ```
 
+## Getting Started
+
+in your ViewController
+
+```swift
+import SimpleCAGraphics
+```
+
+```swift
+let layerController = LayerController()
+layerController.setFrame(x: 0, y: 0, width: 100, height: 70)
+    .translate(x: 100, y: 100)
+    .setBackgroundColor(.red)
+    .setOpacity(0.5)
+view.layer.addSublayer(layerController.layer)
+```
+
+## Documents
+
+- Basic
+- LayerController
+- TextLayerController
+- RectlayerController
+- CircleLayerController
+- GraphicsLayerController
+
 ## License
 
 [MIT license](/LICENSE)
