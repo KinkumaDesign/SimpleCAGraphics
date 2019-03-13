@@ -9,16 +9,73 @@ import SimpleCAGraphics
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var menuTableView: UITableView!
+    
+    enum Menu: Int {
+        case basic = 0
+        case layerController
+        case textLayerController
+        case rectLayerController
+        case circleLayerController
+        case graphicsLayerController
+        
+        var title: String {
+            switch self {
+            case .basic:
+                return "Basic"
+            case .layerController:
+                return "LayerController"
+            case .textLayerController:
+                return "TextLayerController"
+            case .rectLayerController:
+                return "RectLayerController"
+            case .circleLayerController:
+                return "CircleLayerController"
+            case .graphicsLayerController:
+                return "GraphicsLayerController"
+            }
+        }
+        
+        
+        /// Total count of menus
+        static var count: Int {
+            // must change if last menu has been changed
+            return Menu.graphicsLayerController.rawValue + 1
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let layerController = LayerController()
-        layerController.setFrame(x: 0, y: 0, width: 100, height: 70)
-            .translate(x: 100, y: 100)
-            .setBackgroundColor(.red)
-            .setOpacity(0.5)
-        
-        view.layer.addSublayer(layerController.layer)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "SimpleCAGraphics Example"
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let reuseId = "MenuCell"
+        var cell = tableView.dequeueReusableCell(withIdentifier: reuseId)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: reuseId)
+        }
+        if let cell = cell {
+            let menu = Menu(rawValue: indexPath.row)
+            cell.textLabel?.text = menu?.title
+            cell.accessoryType = .disclosureIndicator
+        }
+        return cell!
+    }
+}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select dayo")
+    }
+}

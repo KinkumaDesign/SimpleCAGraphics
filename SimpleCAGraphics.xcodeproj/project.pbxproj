@@ -112,8 +112,8 @@
 				D5AD6C662235FC1A006D640D /* TextLayerController.swift */,
 				D5AD6C682235FC1A006D640D /* ShapeLayerStyleController.swift */,
 				D5AD6C612235FC1A006D640D /* RectLayerController.swift */,
-				D5AD6C632235FC1A006D640D /* GraphicsLayerController.swift */,
 				D5AD6C642235FC1A006D640D /* CircleLayerController.swift */,
+				D5AD6C632235FC1A006D640D /* GraphicsLayerController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
