@@ -52,6 +52,11 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         self.title = "SimpleCAGraphics Example"
     }
+    
+    func createViewController(name: String) -> UIViewController? {
+        let sb = UIStoryboard(name: name, bundle: nil)
+        return sb.instantiateInitialViewController()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -76,6 +81,19 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("select dayo")
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var nextViewController: UIViewController?
+        
+        switch indexPath.row {
+        case Menu.basic.rawValue:
+            nextViewController = createViewController(name: "BasicViewController")
+        default:
+            break
+        }
+        
+        if let nextViewController = nextViewController {
+            navigationController?.pushViewController(nextViewController, animated: true)
+        }
     }
 }

@@ -15,6 +15,8 @@
 		D5AD6C932235FC90006D640D /* iOSExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD6C922235FC90006D640D /* iOSExampleTests.swift */; };
 		D5AD6CAD22360211006D640D /* SimpleCAGraphics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5AD6CA7223601E9006D640D /* SimpleCAGraphics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5AD6CAF22360246006D640D /* SimpleCAGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AD6CA7223601E9006D640D /* SimpleCAGraphics.framework */; };
+		D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B1DA8F22389F2A00BDFA74 /* BasicViewController.storyboard */; };
+		D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1DA9122389F3500BDFA74 /* BasicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		D5AD6C922235FC90006D640D /* iOSExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSExampleTests.swift; sourceTree = "<group>"; };
 		D5AD6C942235FC90006D640D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AD6CA1223601E9006D640D /* SimpleCAGraphics.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SimpleCAGraphics.xcodeproj; path = ../SimpleCAGraphics.xcodeproj; sourceTree = "<group>"; };
+		D5B1DA8F22389F2A00BDFA74 /* BasicViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BasicViewController.storyboard; sourceTree = "<group>"; };
+		D5B1DA9122389F3500BDFA74 /* BasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,12 @@
 		D5AD6C7C2235FC8E006D640D /* iOSExample */ = {
 			isa = PBXGroup;
 			children = (
+				D5B1DA8A22389F0B00BDFA74 /* Basic */,
+				D5B1DA8722389F0B00BDFA74 /* CircleLayerController */,
+				D5B1DA8B22389F0B00BDFA74 /* GraphicsLayerController */,
+				D5B1DA8922389F0B00BDFA74 /* LayerController */,
+				D5B1DA8D22389F0B00BDFA74 /* RectLayerController */,
+				D5B1DA8C22389F0B00BDFA74 /* TextLayerController */,
 				D5AD6C7D2235FC8E006D640D /* AppDelegate.swift */,
 				D5AD6C7F2235FC8E006D640D /* ViewController.swift */,
 				D5AD6C812235FC8E006D640D /* Main.storyboard */,
@@ -150,6 +160,50 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D5B1DA8722389F0B00BDFA74 /* CircleLayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CircleLayerController;
+			sourceTree = "<group>";
+		};
+		D5B1DA8922389F0B00BDFA74 /* LayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LayerController;
+			sourceTree = "<group>";
+		};
+		D5B1DA8A22389F0B00BDFA74 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				D5B1DA8F22389F2A00BDFA74 /* BasicViewController.storyboard */,
+				D5B1DA9122389F3500BDFA74 /* BasicViewController.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		D5B1DA8B22389F0B00BDFA74 /* GraphicsLayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GraphicsLayerController;
+			sourceTree = "<group>";
+		};
+		D5B1DA8C22389F0B00BDFA74 /* TextLayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextLayerController;
+			sourceTree = "<group>";
+		};
+		D5B1DA8D22389F0B00BDFA74 /* RectLayerController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RectLayerController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +314,7 @@
 			files = (
 				D5AD6C882235FC8F006D640D /* LaunchScreen.storyboard in Resources */,
 				D5AD6C852235FC8F006D640D /* Assets.xcassets in Resources */,
+				D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */,
 				D5AD6C832235FC8E006D640D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5AD6C802235FC8E006D640D /* ViewController.swift in Sources */,
+				D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */,
 				D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
