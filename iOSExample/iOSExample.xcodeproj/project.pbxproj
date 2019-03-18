@@ -25,6 +25,8 @@
 		D5EAB7EC223F919900683A2F /* RectLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAB7EB223F919900683A2F /* RectLayerControllerExample.swift */; };
 		D5EAB7EE223F91B400683A2F /* CircleLayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAB7ED223F91B400683A2F /* CircleLayerControllerExample.storyboard */; };
 		D5EAB7F0223F91BE00683A2F /* CircleLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAB7EF223F91BE00683A2F /* CircleLayerControllerExample.swift */; };
+		D5EAB7F2223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAB7F1223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard */; };
+		D5EAB7F4223F98F400683A2F /* GraphicsLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAB7F3223F98F400683A2F /* GraphicsLayerControllerExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		D5EAB7EB223F919900683A2F /* RectLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectLayerControllerExample.swift; sourceTree = "<group>"; };
 		D5EAB7ED223F91B400683A2F /* CircleLayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleLayerControllerExample.storyboard; sourceTree = "<group>"; };
 		D5EAB7EF223F91BE00683A2F /* CircleLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLayerControllerExample.swift; sourceTree = "<group>"; };
+		D5EAB7F1223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GraphicsLayerControllerExample.storyboard; sourceTree = "<group>"; };
+		D5EAB7F3223F98F400683A2F /* GraphicsLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsLayerControllerExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 		D5B1DA8B22389F0B00BDFA74 /* GraphicsLayerController */ = {
 			isa = PBXGroup;
 			children = (
+				D5EAB7F1223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard */,
+				D5EAB7F3223F98F400683A2F /* GraphicsLayerControllerExample.swift */,
 			);
 			path = GraphicsLayerController;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				D5B1DA9A2238AB5100BDFA74 /* TextLayerControllerExample.storyboard in Resources */,
 				D5AD6C852235FC8F006D640D /* Assets.xcassets in Resources */,
 				D5EAB7EE223F91B400683A2F /* CircleLayerControllerExample.storyboard in Resources */,
+				D5EAB7F2223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard in Resources */,
 				D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */,
 				D5AD6C832235FC8E006D640D /* Main.storyboard in Resources */,
 			);
@@ -366,6 +373,7 @@
 				D5B1DA942238A77D00BDFA74 /* LayerControllerExample.swift in Sources */,
 				D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */,
 				D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */,
+				D5EAB7F4223F98F400683A2F /* GraphicsLayerControllerExample.swift in Sources */,
 				D5EAB7EC223F919900683A2F /* RectLayerControllerExample.swift in Sources */,
 				D5B1DA982238AB3D00BDFA74 /* TextLayerControllerExample.swift in Sources */,
 			);
