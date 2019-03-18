@@ -21,6 +21,10 @@
 		D5B1DA962238A78500BDFA74 /* LayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B1DA952238A78500BDFA74 /* LayerControllerExample.storyboard */; };
 		D5B1DA982238AB3D00BDFA74 /* TextLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B1DA972238AB3D00BDFA74 /* TextLayerControllerExample.swift */; };
 		D5B1DA9A2238AB5100BDFA74 /* TextLayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5B1DA992238AB5100BDFA74 /* TextLayerControllerExample.storyboard */; };
+		D5EAB7E9223F918A00683A2F /* RectLayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAB7E8223F918A00683A2F /* RectLayerControllerExample.storyboard */; };
+		D5EAB7EC223F919900683A2F /* RectLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAB7EB223F919900683A2F /* RectLayerControllerExample.swift */; };
+		D5EAB7EE223F91B400683A2F /* CircleLayerControllerExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAB7ED223F91B400683A2F /* CircleLayerControllerExample.storyboard */; };
+		D5EAB7F0223F91BE00683A2F /* CircleLayerControllerExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAB7EF223F91BE00683A2F /* CircleLayerControllerExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		D5B1DA952238A78500BDFA74 /* LayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LayerControllerExample.storyboard; sourceTree = "<group>"; };
 		D5B1DA972238AB3D00BDFA74 /* TextLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayerControllerExample.swift; sourceTree = "<group>"; };
 		D5B1DA992238AB5100BDFA74 /* TextLayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextLayerControllerExample.storyboard; sourceTree = "<group>"; };
+		D5EAB7E8223F918A00683A2F /* RectLayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RectLayerControllerExample.storyboard; sourceTree = "<group>"; };
+		D5EAB7EB223F919900683A2F /* RectLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectLayerControllerExample.swift; sourceTree = "<group>"; };
+		D5EAB7ED223F91B400683A2F /* CircleLayerControllerExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CircleLayerControllerExample.storyboard; sourceTree = "<group>"; };
+		D5EAB7EF223F91BE00683A2F /* CircleLayerControllerExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLayerControllerExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,8 @@
 		D5B1DA8722389F0B00BDFA74 /* CircleLayerController */ = {
 			isa = PBXGroup;
 			children = (
+				D5EAB7ED223F91B400683A2F /* CircleLayerControllerExample.storyboard */,
+				D5EAB7EF223F91BE00683A2F /* CircleLayerControllerExample.swift */,
 			);
 			path = CircleLayerController;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 		D5B1DA8D22389F0B00BDFA74 /* RectLayerController */ = {
 			isa = PBXGroup;
 			children = (
+				D5EAB7E8223F918A00683A2F /* RectLayerControllerExample.storyboard */,
+				D5EAB7EB223F919900683A2F /* RectLayerControllerExample.swift */,
 			);
 			path = RectLayerController;
 			sourceTree = "<group>";
@@ -325,9 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5B1DA962238A78500BDFA74 /* LayerControllerExample.storyboard in Resources */,
+				D5EAB7E9223F918A00683A2F /* RectLayerControllerExample.storyboard in Resources */,
 				D5AD6C882235FC8F006D640D /* LaunchScreen.storyboard in Resources */,
 				D5B1DA9A2238AB5100BDFA74 /* TextLayerControllerExample.storyboard in Resources */,
 				D5AD6C852235FC8F006D640D /* Assets.xcassets in Resources */,
+				D5EAB7EE223F91B400683A2F /* CircleLayerControllerExample.storyboard in Resources */,
 				D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */,
 				D5AD6C832235FC8E006D640D /* Main.storyboard in Resources */,
 			);
@@ -347,10 +361,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5EAB7F0223F91BE00683A2F /* CircleLayerControllerExample.swift in Sources */,
 				D5AD6C802235FC8E006D640D /* ViewController.swift in Sources */,
 				D5B1DA942238A77D00BDFA74 /* LayerControllerExample.swift in Sources */,
 				D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */,
 				D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */,
+				D5EAB7EC223F919900683A2F /* RectLayerControllerExample.swift in Sources */,
 				D5B1DA982238AB3D00BDFA74 /* TextLayerControllerExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

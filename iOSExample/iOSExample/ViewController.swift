@@ -92,6 +92,10 @@ extension ViewController: UITableViewDelegate {
             nextViewController = createViewController(name: "LayerControllerExample")
         case Menu.textLayerController.rawValue:
             nextViewController = createViewController(name: "TextLayerControllerExample")
+        case Menu.rectLayerController.rawValue:
+            nextViewController = createViewController(name: "RectLayerControllerExample")
+        case Menu.circleLayerController.rawValue:
+            nextViewController = createViewController(name: "CircleLayerControllerExample")
         default:
             break
         }

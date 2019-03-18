@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="buz-iy-9VX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rect Layer Controller Example-->
+        <scene sceneID="8Z5-QO-ZYE">
+            <objects>
+                <viewController id="buz-iy-9VX" customClass="RectLayerControllerExample" customModule="iOSExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="inD-RN-H8c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-LN-fTc" userLabel="canvasView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="btB-eY-CnZ" firstAttribute="bottom" secondItem="ThX-LN-fTc" secondAttribute="bottom" id="P23-6a-H6w"/>
+                            <constraint firstItem="ThX-LN-fTc" firstAttribute="leading" secondItem="btB-eY-CnZ" secondAttribute="leading" id="PTB-7P-n9f"/>
+                            <constraint firstItem="ThX-LN-fTc" firstAttribute="top" secondItem="btB-eY-CnZ" secondAttribute="top" id="cw2-71-AH8"/>
+                            <constraint firstItem="btB-eY-CnZ" firstAttribute="trailing" secondItem="ThX-LN-fTc" secondAttribute="trailing" id="q4p-F7-aaP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="btB-eY-CnZ"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="canvasView" destination="ThX-LN-fTc" id="4Td-hD-Pe5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7r-oB-l6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="377" y="-100"/>
+        </scene>
+    </scenes>
+</document>
