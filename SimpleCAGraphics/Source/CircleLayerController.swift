@@ -12,7 +12,7 @@ public class CircleLayerController: LayerController<CAShapeLayer> {
         super.init(layer)
     }
     
-    convenience init(x: Double, y: Double, radius: Double) {
+    convenience public init(x: Double, y: Double, radius: Double) {
         self.init()
         drawCircle(x: x, y: y, radius: radius)
     }

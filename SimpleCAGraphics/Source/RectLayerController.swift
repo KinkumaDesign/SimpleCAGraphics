@@ -12,7 +12,7 @@ public class RectLayerController: LayerController<CAShapeLayer> {
         super.init(layer)
     }
     
-    convenience init(x: Double, y: Double, width: Double, height: Double) {
+    convenience public init(x: Double, y: Double, width: Double, height: Double) {
         self.init()
         drawRect(x: x, y: y, width: width, height: height)
     }
