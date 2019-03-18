@@ -9,8 +9,16 @@ import UIKit
 public class GraphicsLayerController: LayerController<CAShapeLayer> {
     
     public var drawOpacity: Float = 1
-    private var workingLayer: CAShapeLayer?
-    private var workingPath: CGMutablePath?
+    
+    private var _workingLayer: CAShapeLayer?
+    public var workingLayer: CAShapeLayer? {
+        return _workingLayer
+    }
+    
+    private var _workingPath: CGMutablePath?
+    public var workingPath: CGMutablePath? {
+        return _workingPath
+    }
     
     override public init(_ layer: CAShapeLayer = CAShapeLayer()) {
         super.init(layer)
@@ -52,29 +60,29 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
     @discardableResult
     public func moveTo(_ x: Double, _ y: Double) -> Self {
         let newLayer = createSameStyleShapeLayer()
-        workingLayer = newLayer
+        _workingLayer = newLayer
         layer.addSublayer(newLayer)
-        workingPath = CGMutablePath()
-        if let path = workingPath {
+        _workingPath = CGMutablePath()
+        if let path = _workingPath {
             path.move(to: CGPoint(x: x, y: y))
-            workingLayer?.path = path
+            _workingLayer?.path = path
         }
         return self
     }
     
     @discardableResult
     public func lineTo(_ x: Double, _ y: Double) -> Self {
-        guard let workingPath = workingPath else { return self }
+        guard let workingPath = _workingPath else { return self }
         workingPath.addLine(to: CGPoint(x: x, y: y))
-        workingLayer?.path = workingPath
+        _workingLayer?.path = workingPath
         return self
     }
     
     @discardableResult
     public func closePath() -> Self {
-        guard let workingPath = workingPath else { return self }
+        guard let workingPath = _workingPath else { return self }
         workingPath.closeSubpath()
-        workingLayer?.path = workingPath
+        _workingLayer?.path = workingPath
         return self
     }
     
