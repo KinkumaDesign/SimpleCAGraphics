@@ -52,8 +52,8 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
     }
     
     @discardableResult
-    public func clearPath() -> Self {
-        layer = CAShapeLayer()
+    public func clear() -> Self {
+        layer.sublayers?.removeAll()
         return self
     }
     
