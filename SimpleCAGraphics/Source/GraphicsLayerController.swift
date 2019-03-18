@@ -104,6 +104,8 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
                            clockwise: true)
         newLayer.path = mutablePath
         layer.addSublayer(newLayer)
+        _workingLayer = newLayer
+        _workingPath = mutablePath
         return self
     }
     
@@ -115,6 +117,8 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
         mutablePath.addRect(rect)
         newLayer.path = mutablePath
         layer.addSublayer(newLayer)
+        _workingLayer = newLayer
+        _workingPath = mutablePath
         return self
     }
 }
