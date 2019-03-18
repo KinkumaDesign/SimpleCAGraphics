@@ -42,6 +42,7 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
                   .setLineDashPattern(lineDashPattern)
                   .setLineJoin(lineJoin)
         controller.layer.opacity = workingLayerOpacity
+        workingLayerOpacity = 1
         return controller.layer
     }
     
