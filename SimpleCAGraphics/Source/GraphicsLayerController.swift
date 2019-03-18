@@ -8,7 +8,7 @@ import UIKit
 
 public class GraphicsLayerController: LayerController<CAShapeLayer> {
     
-    public var drawOpacity: Float = 1
+    public var workingLayerOpacity: Float = 1
     
     private var _workingLayer: CAShapeLayer?
     public var workingLayer: CAShapeLayer? {
@@ -41,13 +41,13 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
                   .setLineCap(lineCap)
                   .setLineDashPattern(lineDashPattern)
                   .setLineJoin(lineJoin)
-        controller.layer.opacity = drawOpacity
+        controller.layer.opacity = workingLayerOpacity
         return controller.layer
     }
     
     @discardableResult
-    public func setDrawOpacity(_ drawOpacity: Float) -> Self {
-        self.drawOpacity = drawOpacity
+    public func setWorkingLayerOpacity(_ opacity: Float) -> Self {
+        self.workingLayerOpacity = opacity
         return self
     }
     
