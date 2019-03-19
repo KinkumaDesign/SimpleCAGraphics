@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		D502A9942240B86B003E5162 /* BarChartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D502A9932240B86B003E5162 /* BarChartViewController.storyboard */; };
 		D502A9962240B875003E5162 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A9952240B875003E5162 /* BarChartViewController.swift */; };
+		D502A99A2240BA23003E5162 /* ChartScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A9992240BA23003E5162 /* ChartScale.swift */; };
+		D502A99C2240BA30003E5162 /* LinearScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A99B2240BA30003E5162 /* LinearScale.swift */; };
+		D502A99E2240BB5E003E5162 /* BarChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A99D2240BB5E003E5162 /* BarChartData.swift */; };
+		D502A9A02240BC0D003E5162 /* BarChartDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A99F2240BC0D003E5162 /* BarChartDataMapper.swift */; };
+		D502A9A22240BEB6003E5162 /* bar_chart_data.json in Resources */ = {isa = PBXBuildFile; fileRef = D502A9A12240BEB6003E5162 /* bar_chart_data.json */; };
 		D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD6C7D2235FC8E006D640D /* AppDelegate.swift */; };
 		D5AD6C802235FC8E006D640D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD6C7F2235FC8E006D640D /* ViewController.swift */; };
 		D5AD6C832235FC8E006D640D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AD6C812235FC8E006D640D /* Main.storyboard */; };
@@ -78,6 +83,11 @@
 /* Begin PBXFileReference section */
 		D502A9932240B86B003E5162 /* BarChartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BarChartViewController.storyboard; sourceTree = "<group>"; };
 		D502A9952240B875003E5162 /* BarChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
+		D502A9992240BA23003E5162 /* ChartScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartScale.swift; sourceTree = "<group>"; };
+		D502A99B2240BA30003E5162 /* LinearScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearScale.swift; sourceTree = "<group>"; };
+		D502A99D2240BB5E003E5162 /* BarChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartData.swift; sourceTree = "<group>"; };
+		D502A99F2240BC0D003E5162 /* BarChartDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartDataMapper.swift; sourceTree = "<group>"; };
+		D502A9A12240BEB6003E5162 /* bar_chart_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bar_chart_data.json; sourceTree = "<group>"; };
 		D5AD6C7A2235FC8E006D640D /* iOSExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AD6C7D2235FC8E006D640D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5AD6C7F2235FC8E006D640D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +135,11 @@
 		D502A9912240B84F003E5162 /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
+				D502A9A12240BEB6003E5162 /* bar_chart_data.json */,
+				D502A9992240BA23003E5162 /* ChartScale.swift */,
+				D502A99B2240BA30003E5162 /* LinearScale.swift */,
+				D502A99D2240BB5E003E5162 /* BarChartData.swift */,
+				D502A99F2240BC0D003E5162 /* BarChartDataMapper.swift */,
 				D502A9932240B86B003E5162 /* BarChartViewController.storyboard */,
 				D502A9952240B875003E5162 /* BarChartViewController.swift */,
 			);
@@ -364,6 +379,7 @@
 				D5AD6C852235FC8F006D640D /* Assets.xcassets in Resources */,
 				D5EAB7EE223F91B400683A2F /* CircleLayerControllerExample.storyboard in Resources */,
 				D5EAB7F2223F98EB00683A2F /* GraphicsLayerControllerExample.storyboard in Resources */,
+				D502A9A22240BEB6003E5162 /* bar_chart_data.json in Resources */,
 				D5B1DA9022389F2A00BDFA74 /* BasicViewController.storyboard in Resources */,
 				D5AD6C832235FC8E006D640D /* Main.storyboard in Resources */,
 			);
@@ -384,13 +400,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5EAB7F0223F91BE00683A2F /* CircleLayerControllerExample.swift in Sources */,
+				D502A9A02240BC0D003E5162 /* BarChartDataMapper.swift in Sources */,
+				D502A99A2240BA23003E5162 /* ChartScale.swift in Sources */,
 				D5AD6C802235FC8E006D640D /* ViewController.swift in Sources */,
 				D502A9962240B875003E5162 /* BarChartViewController.swift in Sources */,
 				D5B1DA942238A77D00BDFA74 /* LayerControllerExample.swift in Sources */,
 				D5B1DA9222389F3500BDFA74 /* BasicViewController.swift in Sources */,
 				D5AD6C7E2235FC8E006D640D /* AppDelegate.swift in Sources */,
 				D5EAB7F4223F98F400683A2F /* GraphicsLayerControllerExample.swift in Sources */,
+				D502A99E2240BB5E003E5162 /* BarChartData.swift in Sources */,
 				D5EAB7EC223F919900683A2F /* RectLayerControllerExample.swift in Sources */,
+				D502A99C2240BA30003E5162 /* LinearScale.swift in Sources */,
 				D5B1DA982238AB3D00BDFA74 /* TextLayerControllerExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
