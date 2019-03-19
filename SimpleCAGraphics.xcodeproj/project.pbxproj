@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63686F8D2240AA0500191CCB /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63686F8C2240AA0500191CCB /* HexColor.swift */; };
 		D502A99022409952003E5162 /* LayerContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A98F22409952003E5162 /* LayerContentsController.swift */; };
 		D5AD6C362235F96F006D640D /* SimpleCAGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AD6C2C2235F96F006D640D /* SimpleCAGraphics.framework */; };
 		D5AD6C3B2235F96F006D640D /* SimpleCAGraphicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD6C3A2235F96F006D640D /* SimpleCAGraphicsTests.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63686F8C2240AA0500191CCB /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 		D502A98F22409952003E5162 /* LayerContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContentsController.swift; sourceTree = "<group>"; };
 		D5AD6C2C2235F96F006D640D /* SimpleCAGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleCAGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AD6C2F2235F96F006D640D /* SimpleCAGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCAGraphics.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				D5AD6C612235FC1A006D640D /* RectLayerController.swift */,
 				D5AD6C642235FC1A006D640D /* CircleLayerController.swift */,
 				D5AD6C632235FC1A006D640D /* GraphicsLayerController.swift */,
+				63686F8C2240AA0500191CCB /* HexColor.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				D5AD6C6C2235FC1A006D640D /* CircleLayerController.swift in Sources */,
 				D5AD6C6D2235FC1A006D640D /* LayerTransformController.swift in Sources */,
 				D5AD6C702235FC1A006D640D /* ShapeLayerStyleController.swift in Sources */,
+				63686F8D2240AA0500191CCB /* HexColor.swift in Sources */,
 				D5AD6C692235FC1A006D640D /* RectLayerController.swift in Sources */,
 				D5AD6C6A2235FC1A006D640D /* LayerAppearanceController.swift in Sources */,
 			);

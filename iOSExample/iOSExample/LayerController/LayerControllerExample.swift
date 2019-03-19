@@ -35,7 +35,8 @@ class LayerControllerExample: UIViewController {
     
     func transform() {
         let layerController = LayerController()
-        layerController.setBackgroundColor(.blue)
+        let color = HexColor.createColor("#70aeed")
+        layerController.setBackgroundColor(color)
             .setFrame(x: 0, y: 0, width: 100, height: 80)
             .translate(x: 100, y: 100)
             .rotate(radian: .pi / 4)
