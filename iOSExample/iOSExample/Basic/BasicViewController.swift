@@ -25,8 +25,10 @@ class BasicViewController: UIViewController {
     func methodChaining() {
         let layerController = LayerController()
         layerController.setFrame(x: 0, y: 0, width: 100, height: 80)
+            .setBorderColor(.blue)
+            .setBorderWidth(5)
             .setBackgroundColor(.red)
-            .translate(x: 120, y: 50)
+            .translate(x: 120, y: 30)
             .rotate(radian: .pi / 10)
         
         canvasView.layer.addSublayer(layerController.layer)
@@ -37,7 +39,7 @@ class BasicViewController: UIViewController {
         layerController.frame = CGRect(x: 0, y: 0, width: 100, height: 80)
         layerController.backgroundColor = .blue
         layerController.x = 120
-        layerController.y = 180
+        layerController.y = 150
         layerController.rotation = .pi / 10
         
         canvasView.layer.addSublayer(layerController.layer)
