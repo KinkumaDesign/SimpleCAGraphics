@@ -111,6 +111,59 @@ public class GraphicsLayerController: LayerController<CAShapeLayer> {
     }
     
     @discardableResult
+    public func drawArc(newPath: Bool = true,
+                        x: Double,
+                        y: Double,
+                        radius: Double,
+                        startAngle: CGFloat,
+                        endAngle: CGFloat,
+                        clockwise: Bool = false) -> Self {
+        if newPath {
+            let newLayer = createSameStyleShapeLayer()
+            layer.addSublayer(newLayer)
+            _workingLayer = newLayer
+            
+            let mutablePath = CGMutablePath()
+            _workingPath = mutablePath
+        }
+        guard let workingPath = _workingPath else { return self }
+        workingPath.addArc(center: CGPoint(x: x, y: y),
+                           radius: CGFloat(radius),
+                           startAngle: startAngle,
+                           endAngle: endAngle,
+                           clockwise: clockwise)
+        _workingLayer?.path = workingPath
+        return self
+    }
+    
+    @discardableResult
+    public func drawArcDegree(newPath: Bool = true,
+                              x: Double,
+                              y: Double,
+                              radius: Double,
+                              startAngleDegree: Double,
+                              endAngleDegree: Double,
+                              clockwise: Bool = false) -> Self {
+        if newPath {
+            let newLayer = createSameStyleShapeLayer()
+            layer.addSublayer(newLayer)
+            _workingLayer = newLayer
+            
+            let mutablePath = CGMutablePath()
+            _workingPath = mutablePath
+        }
+        guard let workingPath = _workingPath else { return self }
+        let convertRatio:CGFloat = CGFloat.pi / CGFloat(180)
+        workingPath.addArc(center: CGPoint(x: x, y: y),
+                           radius: CGFloat(radius),
+                           startAngle: CGFloat(startAngleDegree) * convertRatio,
+                           endAngle: CGFloat(endAngleDegree) * convertRatio,
+                           clockwise: clockwise)
+        _workingLayer?.path = workingPath
+        return self
+    }
+    
+    @discardableResult
     public func drawRect(x: Double, y: Double, width: Double, height: Double) -> Self {
         let newLayer = createSameStyleShapeLayer()
         let rect = CGRect(x: x, y: y, width: width, height: height)
