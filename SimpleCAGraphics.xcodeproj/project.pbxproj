@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D502A99022409952003E5162 /* LayerContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D502A98F22409952003E5162 /* LayerContentsController.swift */; };
 		D5AD6C362235F96F006D640D /* SimpleCAGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5AD6C2C2235F96F006D640D /* SimpleCAGraphics.framework */; };
 		D5AD6C3B2235F96F006D640D /* SimpleCAGraphicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD6C3A2235F96F006D640D /* SimpleCAGraphicsTests.swift */; };
 		D5AD6C3D2235F96F006D640D /* SimpleCAGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AD6C2F2235F96F006D640D /* SimpleCAGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D502A98F22409952003E5162 /* LayerContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerContentsController.swift; sourceTree = "<group>"; };
 		D5AD6C2C2235F96F006D640D /* SimpleCAGraphics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleCAGraphics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AD6C2F2235F96F006D640D /* SimpleCAGraphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCAGraphics.h; sourceTree = "<group>"; };
 		D5AD6C302235F96F006D640D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				D5AD6C672235FC1A006D640D /* LayerController.swift */,
 				D5AD6C622235FC1A006D640D /* LayerAppearanceController.swift */,
 				D5AD6C652235FC1A006D640D /* LayerTransformController.swift */,
+				D502A98F22409952003E5162 /* LayerContentsController.swift */,
 				D5AD6C662235FC1A006D640D /* TextLayerController.swift */,
 				D5AD6C682235FC1A006D640D /* ShapeLayerStyleController.swift */,
 				D5AD6C612235FC1A006D640D /* RectLayerController.swift */,
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D502A99022409952003E5162 /* LayerContentsController.swift in Sources */,
 				D5AD6C6E2235FC1A006D640D /* TextLayerController.swift in Sources */,
 				D5AD6C6B2235FC1A006D640D /* GraphicsLayerController.swift in Sources */,
 				D5AD6C6F2235FC1A006D640D /* LayerController.swift in Sources */,

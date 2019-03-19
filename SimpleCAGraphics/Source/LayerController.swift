@@ -340,3 +340,86 @@ extension LayerController: LayerAppearanceController {
         return self
     }
 }
+
+// MARK: LayerContentsController
+
+extension LayerController: LayerContentsController {
+    public var image: UIImage? {
+        get {
+            if layer.contents != nil {
+                return UIImage(cgImage: layer.contents as! CGImage)
+            }
+            return nil
+        }
+        set {
+            layer.contents = newValue?.cgImage
+            if let uiimage = newValue {
+                let imageSize = uiimage.size
+                setFrame(frame: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
+            }
+        }
+    }
+    
+    public var contentsRect: CGRect {
+        get {
+            return layer.contentsRect
+        }
+        set {
+            layer.contentsRect = newValue
+        }
+    }
+    
+    public var contentsCenter: CGRect {
+        get {
+            return layer.contentsCenter
+        }
+        set {
+            layer.contentsCenter = newValue
+        }
+    }
+    
+    public var contentsGravity: CALayerContentsGravity {
+        get {
+            return layer.contentsGravity
+        }
+        set {
+            layer.contentsGravity = newValue
+        }
+    }
+    
+    @discardableResult
+    public func setImage(_ image: UIImage?) -> Self {
+        self.image = image
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsRect(x: Double, y: Double, width: Double, height: Double) -> Self {
+        contentsRect = CGRect(x: x, y: y, width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsRect(rect: CGRect) -> Self {
+        contentsRect = rect
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsCenter(x: Double, y: Double, width: Double, height: Double) -> Self {
+        contentsCenter = CGRect(x: x, y: y, width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsCenter(rect: CGRect) -> Self {
+        contentsCenter = rect
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsGravity(_ contentsGravity: CALayerContentsGravity) -> Self {
+        self.contentsGravity = contentsGravity
+        return self
+    }
+}
