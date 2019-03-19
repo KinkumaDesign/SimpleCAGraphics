@@ -160,6 +160,89 @@ extension LayerController: LayerAppearanceController {
         }
     }
     
+    var isHidden: Bool {
+        get {
+            return layer.isHidden
+        }
+        set {
+            layer.isHidden = newValue
+        }
+    }
+    
+    var maskToBounds: Bool {
+        get {
+            return layer.masksToBounds
+        }
+        set {
+            layer.masksToBounds = newValue
+        }
+    }
+    
+    var mask: CALayer? {
+        get {
+            return layer.mask
+        }
+        set {
+            layer.mask = newValue
+        }
+    }
+    
+    var borderWidth: Double {
+        get {
+            return Double(layer.borderWidth)
+        }
+        set {
+            layer.borderWidth = CGFloat(newValue)
+        }
+    }
+    
+    var borderColor: UIColor? {
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+    
+    var shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    var shadowRadius: Double {
+        get {
+            return Double(layer.shadowRadius)
+        }
+        set {
+            layer.shadowRadius = CGFloat(newValue)
+        }
+    }
+    
+    var shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    var shadowColor: UIColor? {
+        get {
+            guard let color = layer.shadowColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+    }
+    
     public var cornerRadius: Float {
         get {
             return Float(layer.cornerRadius)
@@ -186,14 +269,74 @@ extension LayerController: LayerAppearanceController {
     }
     
     @discardableResult
-    public func setCornerRadius(_ cornerRadius: Float) -> Self {
-        self.cornerRadius = cornerRadius
+    public func setIsHidden(_ isHidden: Bool) -> Self {
+        self.isHidden = isHidden
         return self
     }
     
     @discardableResult
-    public func setBackgroundColor(_ backgroundColor: UIColor?) -> Self {
-        self.backgroundColor = backgroundColor
+    public func setMaskToBounds(_ maskToBounds: Bool) -> Self {
+        self.maskToBounds = maskToBounds
+        return self
+    }
+    
+    @discardableResult
+    public func setMask(_ mask: CALayer?) -> Self {
+        self.mask = mask
+        return self
+    }
+    
+    @discardableResult
+    public func setBorderWidth(_ width: Double) -> Self {
+        borderWidth = width
+        return self
+    }
+    
+    @discardableResult
+    public func setBorderColor(_ color: UIColor?) -> Self {
+        borderColor = color
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowOpacity(_ opacity: Float) -> Self {
+        shadowOpacity = opacity
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowRadius(_ radius: Double) -> Self {
+        shadowRadius = radius
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowOffset(width: Double, height: Double) -> Self {
+        shadowOffset = CGSize(width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowOffset(size: CGSize) -> Self {
+        shadowOffset = size
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowColor(_ color: UIColor?) -> Self {
+        shadowColor = color
+        return self
+    }
+    
+    @discardableResult
+    public func setCornerRadius(_ radius: Float) -> Self {
+        cornerRadius = radius
+        return self
+    }
+    
+    @discardableResult
+    public func setBackgroundColor(_ color: UIColor?) -> Self {
+        backgroundColor = color
         return self
     }
 }
