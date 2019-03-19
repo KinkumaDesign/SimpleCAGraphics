@@ -24,9 +24,9 @@ class TextLayerControllerExample: UIViewController {
     func basic() {
         let textLayerController = TextLayerController()
         textLayerController.setText("Hello World")
-            .setFont(UIFont.systemFont(ofSize: 18, weight: .bold))
+            .setFont(UIFont.systemFont(ofSize: 24, weight: .bold))
             .setTextColor(.blue)
-            .setFrame(x: 0, y: 0, width: 100, height: 20)
+            .setFrame(x: 0, y: 0, width: 200, height: 30)
             .translate(x: 100, y: 80)
         
         canvasView.layer.addSublayer(textLayerController.layer)
@@ -36,8 +36,8 @@ class TextLayerControllerExample: UIViewController {
         let textLayerController = TextLayerController()
         textLayerController.setText("Hello World1 Hello World2")
             .setIsWrapped(true)
-            .setFrame(x: 0, y: 0, width: 280, height: 20)
-            .setFontSize(12)
+            .setFrame(x: 0, y: 0, width: 280, height: 30)
+            .setFontSize(18)
             .setTextColor(.black)
             .setAlignmentMode(.right)
             .setTruncationMode(.end)
