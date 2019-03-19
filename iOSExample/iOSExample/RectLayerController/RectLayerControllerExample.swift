@@ -19,7 +19,7 @@ class RectLayerControllerExample: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.rectLayerController.title
+        title = ViewController.BasicExampleMenu.rectLayerController.title
     }
     
     func initExample() {

@@ -20,7 +20,7 @@ class LayerControllerExample: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.layerController.title
+        title = ViewController.BasicExampleMenu.layerController.title
     }
     
     func appearance() {

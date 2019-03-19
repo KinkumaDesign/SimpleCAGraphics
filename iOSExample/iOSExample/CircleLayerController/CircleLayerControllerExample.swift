@@ -19,7 +19,7 @@ class CircleLayerControllerExample: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.circleLayerController.title
+        title = ViewController.BasicExampleMenu.circleLayerController.title
     }
     
     func initExample() {

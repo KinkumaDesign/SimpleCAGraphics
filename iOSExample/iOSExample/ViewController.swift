@@ -11,7 +11,23 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var menuTableView: UITableView!
     
-    enum Menu: Int {
+    enum Sections: Int {
+        case basicExample = 0
+        case practicalExample
+        var title: String {
+            switch self {
+            case .basicExample:
+                return "Basic Example"
+            case .practicalExample:
+                return "Practical Example"
+            }
+        }
+        static var count: Int {
+            return Sections.practicalExample.rawValue + 1
+        }
+    }
+    
+    enum BasicExampleMenu: Int {
         case basic = 0
         case layerController
         case textLayerController
@@ -40,7 +56,20 @@ class ViewController: UIViewController {
         /// Total count of menus
         static var count: Int {
             // must change if last menu has been changed
-            return Menu.graphicsLayerController.rawValue + 1
+            return BasicExampleMenu.graphicsLayerController.rawValue + 1
+        }
+    }
+    
+    enum PracticalExampleMenu: Int {
+        case barChart = 0
+        var title: String {
+            switch self {
+            case .barChart:
+                return "Bar Chart"
+            }
+        }
+        static var count: Int {
+            return PracticalExampleMenu.barChart.rawValue + 1
         }
     }
     
@@ -60,8 +89,19 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Sections.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Menu.count
+        switch section {
+        case 0:
+            return BasicExampleMenu.count
+        case 1:
+            return PracticalExampleMenu.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,11 +111,23 @@ extension ViewController: UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: reuseId)
         }
         if let cell = cell {
-            let menu = Menu(rawValue: indexPath.row)
-            cell.textLabel?.text = menu?.title
+            switch indexPath.section {
+            case 0:
+                let menu = BasicExampleMenu(rawValue: indexPath.row)
+                cell.textLabel?.text = menu?.title
+            case 1:
+                let menu = PracticalExampleMenu(rawValue: indexPath.row)
+                cell.textLabel?.text = menu?.title
+            default:
+                break
+            }
             cell.accessoryType = .disclosureIndicator
         }
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return Sections(rawValue: section)?.title
     }
 }
 
@@ -85,22 +137,35 @@ extension ViewController: UITableViewDelegate {
         
         var nextViewController: UIViewController?
         
-        switch indexPath.row {
-        case Menu.basic.rawValue:
-            nextViewController = createViewController(name: "BasicViewController")
-        case Menu.layerController.rawValue:
-            nextViewController = createViewController(name: "LayerControllerExample")
-        case Menu.textLayerController.rawValue:
-            nextViewController = createViewController(name: "TextLayerControllerExample")
-        case Menu.rectLayerController.rawValue:
-            nextViewController = createViewController(name: "RectLayerControllerExample")
-        case Menu.circleLayerController.rawValue:
-            nextViewController = createViewController(name: "CircleLayerControllerExample")
-        case Menu.graphicsLayerController.rawValue:
-            nextViewController = createViewController(name: "GraphicsLayerControllerExample")
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case BasicExampleMenu.basic.rawValue:
+                nextViewController = createViewController(name: "BasicViewController")
+            case BasicExampleMenu.layerController.rawValue:
+                nextViewController = createViewController(name: "LayerControllerExample")
+            case BasicExampleMenu.textLayerController.rawValue:
+                nextViewController = createViewController(name: "TextLayerControllerExample")
+            case BasicExampleMenu.rectLayerController.rawValue:
+                nextViewController = createViewController(name: "RectLayerControllerExample")
+            case BasicExampleMenu.circleLayerController.rawValue:
+                nextViewController = createViewController(name: "CircleLayerControllerExample")
+            case BasicExampleMenu.graphicsLayerController.rawValue:
+                nextViewController = createViewController(name: "GraphicsLayerControllerExample")
+            default:
+                break
+            }
+        case 1:
+            switch indexPath.row {
+            case PracticalExampleMenu.barChart.rawValue:
+                print("practical")
+            default:
+                break
+            }
         default:
             break
         }
+
         
         if let nextViewController = nextViewController {
             navigationController?.pushViewController(nextViewController, animated: true)

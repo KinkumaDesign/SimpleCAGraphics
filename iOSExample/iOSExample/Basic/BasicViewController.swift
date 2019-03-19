@@ -19,7 +19,7 @@ class BasicViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.basic.title
+        title = ViewController.BasicExampleMenu.basic.title
     }
     
     func methodChaining() {

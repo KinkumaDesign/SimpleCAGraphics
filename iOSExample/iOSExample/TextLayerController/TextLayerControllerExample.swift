@@ -18,7 +18,7 @@ class TextLayerControllerExample: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.textLayerController.title
+        title = ViewController.BasicExampleMenu.textLayerController.title
     }
     
     func basic() {

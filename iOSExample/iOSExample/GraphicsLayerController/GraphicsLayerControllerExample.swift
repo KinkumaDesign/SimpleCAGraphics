@@ -26,7 +26,7 @@ class GraphicsLayerControllerExample: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = ViewController.Menu.graphicsLayerController.title
+        title = ViewController.BasicExampleMenu.graphicsLayerController.title
     }
     
     @IBAction func clearButtonTapped() {
