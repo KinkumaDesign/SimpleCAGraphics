@@ -158,7 +158,7 @@ extension ViewController: UITableViewDelegate {
         case 1:
             switch indexPath.row {
             case PracticalExampleMenu.barChart.rawValue:
-                print("practical")
+                nextViewController = createViewController(name: "BarChartViewController")
             default:
                 break
             }
