@@ -20,6 +20,8 @@ class GraphicsLayerControllerExample: UIViewController {
         drawRect()
         drawCircle()
         drawPaths()
+        drawArc()
+        drawArcDegree()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,5 +68,37 @@ class GraphicsLayerControllerExample: UIViewController {
             .lineTo(200, 350)
             .lineTo(200, 400)
             .lineTo(100, 400)
+    }
+    
+    func drawArc() {
+        let centerX: Double = 100
+        let centerY: Double = 450
+        graphicsLayerController
+            .setLineWidth(1)
+            .setStrokeColor(.purple)
+            .setFillColor(.red)
+            .moveTo(centerX, centerY)
+            .drawArc(newPath: false,
+                     x: centerX,
+                     y: centerY,
+                     radius: 30,
+                     startAngle: 0,
+                     endAngle: CGFloat.pi * 1.5,
+                     clockwise: false)
+            .closePath()
+    }
+    
+    func drawArcDegree() {
+        graphicsLayerController
+            .setLineWidth(15)
+            .setStrokeColor(.green)
+            .setFillColor(nil)
+            .drawArcDegree(newPath: true,
+                           x: 250,
+                           y: 450,
+                           radius: 30,
+                           startAngleDegree: 0,
+                           endAngleDegree: 270,
+                           clockwise: true)
     }
 }
