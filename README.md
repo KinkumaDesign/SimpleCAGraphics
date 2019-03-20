@@ -55,8 +55,6 @@ pod 'SimpleCAGraphics', :git => 'https://github.com/KinkumaDesign/SimpleCAGraphi
 
 ## Getting Started
 
-in your ViewController
-
 ```swift
 import SimpleCAGraphics
 ```
@@ -70,9 +68,11 @@ layerController.setFrame(x: 0, y: 0, width: 100, height: 70)
 view.layer.addSublayer(layerController.layer)
 ```
 
-## Documents
+## Usage
 
-- Basic
+You can read example code in [iOSExample project](/iOSExample)
+
+- [Basic](/Documentation/Basic.md)
 - LayerController
 - TextLayerController
 - RectlayerController
