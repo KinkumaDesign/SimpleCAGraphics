@@ -35,7 +35,7 @@ layerController.opacity = 0.5
 
 ### Result Image
 
-[Basic](/Documentation/images/simulator_basic.png)
+![Basic](/Documentation/images/simulator_basic.png)
 
 ### Method Chaining
 
