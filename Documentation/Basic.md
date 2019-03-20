@@ -33,9 +33,7 @@ layerController.opacity = 0.5
 
 ## Example
 
-### Result Image
-
-<img src="/Documentation/images/simulator_basic.png" style="border:1px solid #ccc;">
+### Image
 
 ![Basic](/Documentation/images/simulator_basic.png)
 
