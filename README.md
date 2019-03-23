@@ -2,6 +2,8 @@
 
 Easy access to Core Animation grahpics
 
+![screenshot](/Documentation/images/ex_layer_controller.png)
+
 ## Features
 
 - Method chaining for Layer's properties and methods
