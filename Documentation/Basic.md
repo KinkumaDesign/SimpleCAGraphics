@@ -31,6 +31,26 @@ layerController.backgroundColor = .red
 layerController.opacity = 0.5
 ```
 
+## Without or With `CGFloat`
+
+You can call methods with Swift's native value type `Double` or `Float`.
+
+```swift
+layerController.setFrame(x: 0, y: 0, width: 100, height: 80)
+    .translate(x: 40, y: 30)
+```
+
+You can also call it with `CGFloat`. At this case, each method has `CG` suffix.
+
+```swift
+layerController.setFrameCG(x: 0, y: 0, width: 100, height: 80)
+    .translateCG(x: 40, y: 30)
+```
+
+Although method name and arguments are different, the library does the same thing.
+
+
+
 ## Example
 
 ### Screenshot

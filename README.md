@@ -7,7 +7,7 @@ Easy access to Core Animation grahpics
 ## Features
 
 - Method chaining for Layer's properties and methods
-- Call methods without 'CG-' type variables
+- Call methods with `Double` or `Float` type arguments. Library also supports `CGFloat` type
 
 ## Requirements
 
