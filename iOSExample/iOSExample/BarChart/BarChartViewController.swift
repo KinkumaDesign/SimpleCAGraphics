@@ -73,7 +73,7 @@ class BarChartViewController: UIViewController {
     }
     
     func setupChartLayer() {
-        chartLayerController.setFrame(x: 0, y: 0, width: Double(chartSize.width), height: Double(chartSize.height))
+        chartLayerController.setFrameCG(x: 0, y: 0, width: chartSize.width, height: chartSize.height)
             .translate(x: chartMargin.left, y: chartMargin.top)
         canvasView.layer.addSublayer(chartLayerController.layer)
     }

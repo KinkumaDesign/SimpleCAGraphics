@@ -83,7 +83,7 @@ class GraphicsLayerControllerExample: UIViewController {
                      y: centerY,
                      radius: 30,
                      startAngle: 0,
-                     endAngle: CGFloat.pi * 1.5,
+                     endAngle: Double.pi * 1.5,
                      clockwise: false)
             .closePath()
     }
