@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![Basic](/Documentation/images/ex_text_layer_controllerpng)
+![Basic](/Documentation/images/ex_text_layer_controller.png)
 
 ## Basic
 
