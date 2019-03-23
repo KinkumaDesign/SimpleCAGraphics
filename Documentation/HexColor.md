@@ -8,7 +8,6 @@ Hex color string utility
 let color = HexColor.createColor("#ffaabb")
 
 // without #
-
 let color2 = HexColor.createColor("ffaabb")
 ```
 
