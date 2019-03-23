@@ -16,8 +16,10 @@ protocol ShapeLayerStyleController {
     func setFillColor(_ fillColor: UIColor?) -> Self
     func setStrokeColor(_ strokeColor: UIColor?) -> Self
     func setLineWidth(_ lineWidth: Double) -> Self
+    func setLineWidthCG(_ lineWidth: CGFloat) -> Self
     func setLineCap(_ lineCap: CAShapeLayerLineCap) -> Self
     func setLineDashPattern(_ lineDashPattern: [Double]?) -> Self
+    func setLineDashPatternCG(_ lineDashPattern: [CGFloat]?) -> Self
     func setLineJoin(_ lineJoin: CAShapeLayerLineJoin) -> Self
 }
 
@@ -97,6 +99,12 @@ extension LayerController: ShapeLayerStyleController where LAYER == CAShapeLayer
         self.lineWidth = lineWidth
         return self
     }
+    
+    @discardableResult
+    public func setLineWidthCG(_ lineWidth: CGFloat) -> Self {
+        self.lineWidth = Double(lineWidth)
+        return self
+    }
 
     @discardableResult
     func setLineCap(_ lineCap: CAShapeLayerLineCap) -> Self {
@@ -107,6 +115,13 @@ extension LayerController: ShapeLayerStyleController where LAYER == CAShapeLayer
     @discardableResult
     public func setLineDashPattern(_ lineDashPattern: [Double]?) -> Self {
         self.lineDashPattern = lineDashPattern
+        return self
+    }
+    
+    @discardableResult
+    public func setLineDashPatternCG(_ lineDashPattern: [CGFloat]?) -> Self {
+        let doubledPattern = lineDashPattern?.map { Double($0) }
+        self.lineDashPattern = doubledPattern
         return self
     }
     
