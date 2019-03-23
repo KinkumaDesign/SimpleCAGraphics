@@ -7,7 +7,7 @@
 ### Subclass of LayerController
 
 - TextLayerController
-- RectlayerController
+- RectLayerController
 - CircleLayerController
 - GraphicsLayerController
 
@@ -33,9 +33,9 @@ layerController.opacity = 0.5
 
 ## Example
 
-### Image
+### Screenshot
 
-![Basic](/Documentation/images/simulator_basic.png)
+![Basic](/Documentation/images/ex_basic.png)
 
 ### Method Chaining
 

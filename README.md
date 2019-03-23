@@ -73,11 +73,11 @@ view.layer.addSublayer(layerController.layer)
 You can read example code in [iOSExample project](/iOSExample)
 
 - [Basic](/Documentation/Basic.md)
-- LayerController
-- TextLayerController
-- RectlayerController
-- CircleLayerController
-- GraphicsLayerController
+- [LayerController](/Documentation/LayerController.md)
+- [TextLayerController](/Documentation/TextLayerController.md)
+- [RectLayerController](/Documentation/RectLayerController.md)
+- [CircleLayerController](/Documentation/CircleLayerController.md)
+- [GraphicsLayerController](/Documentation/GraphicsLayerController.md)
 
 ## License
 
