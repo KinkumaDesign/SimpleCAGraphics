@@ -45,6 +45,11 @@ carthage update --platform iOS
 $(SRCROOT)/Carthage/Build/iOS/SimpleCAGraphics.framework
 ```
 
+5. Set `Output Files`
+
+```
+$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SimpleCAGraphics.framework
+```
 
 
 ### CocoaPods
