@@ -79,6 +79,10 @@ You can read example code in [iOSExample project](/iOSExample)
 - [CircleLayerController](/Documentation/CircleLayerController.md)
 - [GraphicsLayerController](/Documentation/GraphicsLayerController.md)
 
+Practical Example
+
+- [BarChart](/Documentation/BarChart.md)
+
 ## License
 
 [MIT license](/LICENSE)
