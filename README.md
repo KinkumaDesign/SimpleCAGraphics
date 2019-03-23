@@ -85,6 +85,10 @@ Practical Example
 
 - [BarChart](/Documentation/BarChart.md)
 
+Utility
+
+- [HexColor](/Documentation/HexColor.md)
+
 ## License
 
 [MIT license](/LICENSE)

@@ -1,4 +1,4 @@
-# Practical Example / BarChart
+# BarChart
 
 ## Screenshot
 
