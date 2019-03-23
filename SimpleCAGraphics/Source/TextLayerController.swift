@@ -111,6 +111,12 @@ public class TextLayerController: LayerController<CATextLayer> {
     }
     
     @discardableResult
+    public func setFontSizeCG(_ size: CGFloat) -> Self {
+        self.fontSize = Float(size)
+        return self
+    }
+    
+    @discardableResult
     public func setIsWrapped(_ wrapped: Bool) -> Self {
         self.isWrapped = wrapped
         return self
