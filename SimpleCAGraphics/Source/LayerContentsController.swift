@@ -14,8 +14,10 @@ protocol LayerContentsController {
     
     func setImage(_ image: UIImage?) -> Self
     func setContentsRect(x: Double, y: Double, width: Double, height: Double) -> Self
+    func setContentsRectCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self
     func setContentsRect(rect: CGRect) -> Self
     func setContentsCenter(x: Double, y: Double, width: Double, height: Double) -> Self
+    func setContentsCenterCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self
     func setContentsCenter(rect: CGRect) -> Self
     func setContentsGravity(_ contentsGravity: CALayerContentsGravity) -> Self
 }

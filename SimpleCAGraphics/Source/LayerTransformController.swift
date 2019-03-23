@@ -21,10 +21,18 @@ protocol LayerTransformController {
     var scaleX: Double { get set }
     var scaleY: Double { get set }
     var frame: CGRect { get set }
+    func setX(_ x: Double) -> Self
+    func setXCG(_ x: CGFloat) -> Self
+    func setY(_ y: Double) -> Self
+    func setYCG(_ y: CGFloat) -> Self
     func translate(x: Double, y: Double) -> Self
+    func translateCG(x: CGFloat, y: CGFloat) -> Self
     func rotate(radian: Double) -> Self
+    func rotateCG(radian: CGFloat) -> Self
     func scale(scaleX: Double, scaleY: Double) -> Self
+    func scaleCG(scaleX: CGFloat, scaleY: CGFloat) -> Self
     func applyTransform() -> Self
     func setFrame(x: Double, y: Double, width: Double, height: Double) -> Self
+    func setFrameCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self
     func setFrame(frame: CGRect) -> Self
 }

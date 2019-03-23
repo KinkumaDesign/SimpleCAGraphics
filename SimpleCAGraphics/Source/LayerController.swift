@@ -97,9 +97,45 @@ extension LayerController: LayerTransformController {
     }
     
     @discardableResult
+    public func setX(_ x: Double) -> Self {
+        transformProps.x = x
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
+    public func setXCG(_ x: CGFloat) -> Self {
+        transformProps.x = Double(x)
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
+    public func setY(_ y: Double) -> Self {
+        transformProps.y = y
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
+    public func setYCG(_ y: CGFloat) -> Self {
+        transformProps.y = Double(y)
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
     public func translate(x: Double, y: Double) -> Self {
         transformProps.x = x
         transformProps.y = y
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
+    public func translateCG(x: CGFloat, y: CGFloat) -> Self {
+        transformProps.x = Double(x)
+        transformProps.y = Double(y)
         applyTransform()
         return self
     }
@@ -112,9 +148,24 @@ extension LayerController: LayerTransformController {
     }
     
     @discardableResult
+    public func rotateCG(radian: CGFloat) -> Self {
+        transformProps.rotation = Double(radian)
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
     public func scale(scaleX: Double, scaleY: Double) -> Self {
         transformProps.scaleX = scaleX
         transformProps.scaleY = scaleY
+        applyTransform()
+        return self
+    }
+    
+    @discardableResult
+    public func scaleCG(scaleX: CGFloat, scaleY: CGFloat) -> Self {
+        transformProps.scaleX = Double(scaleX)
+        transformProps.scaleY = Double(scaleY)
         applyTransform()
         return self
     }
@@ -137,6 +188,12 @@ extension LayerController: LayerTransformController {
     
     @discardableResult
     public func setFrame(x: Double, y: Double, width: Double, height: Double) -> Self {
+        layer.frame = CGRect(x: x, y: y, width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setFrameCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self {
         layer.frame = CGRect(x: x, y: y, width: width, height: height)
         return self
     }
@@ -269,6 +326,12 @@ extension LayerController: LayerAppearanceController {
     }
     
     @discardableResult
+    public func setOpacityCG(_ opacity: CGFloat) -> Self {
+        self.opacity = Float(opacity)
+        return self
+    }
+    
+    @discardableResult
     public func setIsHidden(_ isHidden: Bool) -> Self {
         self.isHidden = isHidden
         return self
@@ -293,6 +356,12 @@ extension LayerController: LayerAppearanceController {
     }
     
     @discardableResult
+    public func setBorderWidthCG(_ width: CGFloat) -> Self {
+        borderWidth = Double(width)
+        return self
+    }
+    
+    @discardableResult
     public func setBorderColor(_ color: UIColor?) -> Self {
         borderColor = color
         return self
@@ -305,13 +374,31 @@ extension LayerController: LayerAppearanceController {
     }
     
     @discardableResult
+    public func setShadowOpacityCG(_ opacity: CGFloat) -> Self {
+        shadowOpacity = Float(opacity)
+        return self
+    }
+    
+    @discardableResult
     public func setShadowRadius(_ radius: Double) -> Self {
         shadowRadius = radius
         return self
     }
     
     @discardableResult
+    public func setShadowRadiusCG(_ radius: CGFloat) -> Self {
+        shadowRadius = Double(radius)
+        return self
+    }
+    
+    @discardableResult
     public func setShadowOffset(width: Double, height: Double) -> Self {
+        shadowOffset = CGSize(width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setShadowOffsetCG(width: CGFloat, height: CGFloat) -> Self {
         shadowOffset = CGSize(width: width, height: height)
         return self
     }
@@ -331,6 +418,12 @@ extension LayerController: LayerAppearanceController {
     @discardableResult
     public func setCornerRadius(_ radius: Float) -> Self {
         cornerRadius = radius
+        return self
+    }
+    
+    @discardableResult
+    public func setCornerRadiusCG(_ radius: CGFloat) -> Self {
+        cornerRadius = Float(radius)
         return self
     }
     
@@ -400,6 +493,12 @@ extension LayerController: LayerContentsController {
     }
     
     @discardableResult
+    public func setContentsRectCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self {
+        contentsRect = CGRect(x: Double(x), y: Double(y), width: Double(width), height: Double(height))
+        return self
+    }
+    
+    @discardableResult
     public func setContentsRect(rect: CGRect) -> Self {
         contentsRect = rect
         return self
@@ -408,6 +507,12 @@ extension LayerController: LayerContentsController {
     @discardableResult
     public func setContentsCenter(x: Double, y: Double, width: Double, height: Double) -> Self {
         contentsCenter = CGRect(x: x, y: y, width: width, height: height)
+        return self
+    }
+    
+    @discardableResult
+    public func setContentsCenterCG(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) -> Self {
+        contentsCenter = CGRect(x: Double(x), y: Double(y), width: Double(width), height: Double(height))
         return self
     }
     
